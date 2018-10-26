@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Oct 21 16:55:11 2018
-
 @author: Groupe 12.36
 """
 from ATR import *
@@ -29,8 +28,8 @@ def E_Out_comb(nc,deltaH_comb,T_in,T_out):
 #n mol H2/ n mol total *2+ n mol CH4/ n mol total *16
 def E_In_SMR(na,nb,nc,deltaH_SMR,deltaH_WGS,T_in,T_out):
     xi=Avan_ATR(na,nb,1,T_out,P,E)
-    n_tot=n_total_out(xi[1],na,nb,nc)-2.24*nc# le dernier est pour le H2O
-    Cmol_SMR= (0.002*(3*xi[0]+xi[1])+xi[1]*0.044+(xi[0]-xi[1])*0.028+0.018*(nb-nc-xi[0]-xi[1])+0.016*(3*xi[0]+xi[1]))*2.9/n_tot
+    n_tot=n_total_out(xi[1],na,nb,nc)-3.48*nc# le dernier est pour le H2O
+    Cmol_SMR= (0.002*(3*xi[0]+xi[1])+xi[1]*0.044+(xi[0]-xi[1])*0.028+0.018*(nb-2*nc-xi[0]-xi[1])+0.016*(3*xi[0]+xi[1]))*2.9/n_tot
     #verfier signe de xi[1]-xi[2]
     return (Cmol_SMR*(T_out-T_in) +deltaH_SMR)*na +deltaH_WGS*(xi[1])
 
