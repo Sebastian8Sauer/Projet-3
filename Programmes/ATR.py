@@ -48,7 +48,7 @@ def Avan_ATR(na,nb,nc,T_out,P,E):#Programme retournant un tableau sol dont sol[0
 def Out_ATR(na,nb,nc,deg):#'sol contient les débits de CH4...'
     sol= np.empty(5)
     sol[0]= na - deg[0] #CH4
-    sol[1]= nb+nc-deg[0]-deg[1]#H20
+    sol[1]= nb+2*nc-deg[0]-deg[1]#H20
     sol[2]= deg[0]-deg[1]#CO
     sol[3]= 3*deg[0] + deg[1]#H2
     sol[4]= nc+deg[0]#CO2
