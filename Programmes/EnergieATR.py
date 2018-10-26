@@ -17,8 +17,8 @@ Cm_comb=1200#j/kg*k
 # et donc allons calculer une masse molaire moyenne= 68.95 (ou 51.91 si on prend les gaz de debut)
 
 deltaH_comb=-803 #kj/molde CH4
-delatH_SMR=224 #kj/molde CH4
-delatH_WGS= -34 #kj/mol de CO
+deltaH_SMR=224 #kj/molde CH4
+deltaH_WGS= -34 #kj/mol de CO
 #T_Out>T_in
 
 def E_Out_comb(nc,deltaH_comb,T_in,T_out):
