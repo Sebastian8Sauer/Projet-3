@@ -8,7 +8,7 @@ from ATR import *
 T_in=693
 T_out=1300
 P=50
-E=0.5/100
+E=0.1/100
 Cm_SMR= 2900 #j/kg*k
 Cm_comb=1200#j/kg*k
 
