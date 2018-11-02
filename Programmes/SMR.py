@@ -24,7 +24,7 @@ def Avan_SMR(na,nb,T,P,E):#Programme retournant un tableau sol dont sol[0]=Xi1 ,
     vK2=funK2(T)#Valeur K2
     
     for X in np.linspace(0,M,5000) : 
-        for Y in np.linspace(0,M,5000) :
+        for Y in np.linspace(0,X,5000) :
             if (vK1 <= K1(X,Y,na,nb,P)*(1+E) and vK1 >= K1(X,Y,na,nb,P)*(1-E)) and (vK2 <= K2(X,Y,na,nb)*(1+E) and vK2 >= K2(X,Y,na,nb)*(1-E)) :
                 sol[0] = X
                 #print('sol de X : ', X)
