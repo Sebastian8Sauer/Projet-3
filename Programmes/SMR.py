@@ -24,7 +24,7 @@ def Avan_SMR(na,nb,T,P,E):#Programme retournant un tableau sol dont sol[0]=Xi1 ,
     vK2=funK2(T)#Valeur K2
     
     for X in np.linspace(0,M,5000) : 
-        for Y in np.linespace(0,M,5000) :
+        for Y in np.linspace(0,M,5000) :
             if (vK1 <= K1(X,Y,na,nb,P)*(1+E) and vK1 >= K1(X,Y,na,nb,P)*(1-E)) and (vK2 <= K2(X,Y,na,nb)*(1+E) and vK2 >= K2(X,Y,na,nb)*(1-E)) :
                 sol[0] = X
                 #print('sol de X : ', X)
@@ -32,26 +32,6 @@ def Avan_SMR(na,nb,T,P,E):#Programme retournant un tableau sol dont sol[0]=Xi1 ,
                 #print('sol de Y : ', Y)
             #on pourrait imprimer les valeurs, si on en obtient plusieurs -> on peut encore reduire l'erreur
     return sol
-    
-    
-    # step= M/1000
-    # X=np.arange(0,M,step) #Xi_1
-    # Y=np.arange(0,M,step) #Xi_2
-    # M1=np.empty((len(X),len(Y)),dtype=np.float32)
-    # M2=np.empty((len(X),len(Y)),dtype=np.float32)
-'''for i in range(0,len(X)):#Remplissage des matrices
-        for j in range(0,len(Y)):
-            M1[i][j]=K1(X[i],Y[j],na,nb,P)
-    for i in range(0,len(X)):#Remplissage des matrices
-        for j in range(0,len(Y)):
-            M2[i][j]=K2(X[i],Y[j],na,nb)
-    for i in range(0,len(X)):#Recherche de la solution
-        for j in range(0,len(Y)):
-            if (M1[i][j] >= (K1r * (1-E)) and M1[i][j] <= (K1r * (1+E)) ) and (M2[i][j] >= (K2r * (1-E)) and M2[i][j] <= (K2r * (1+E)) ) :
-                sol[0]=X[i]
-                sol[1]=Y[j]
-    return sol
-'''
     
 #Débits finaux
 def Out_SMR(na,nb,deg):#'sol contient les débits de CH4...'
