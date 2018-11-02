@@ -8,7 +8,7 @@ import numpy as np
 
 
 #Définition des constantes d'équilibres
-def funK1(T_out): #SMR
+def funK1(T_out): #SMR123
     return 10**(-(11650/T_out)+13.076)
 def funK2(T_out): #WGS
     return 10**((1910/T_out)-1.764)
