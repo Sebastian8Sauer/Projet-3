@@ -31,7 +31,8 @@ def Avan_SMR(na,nb,T,P,E):#Programme retournant un tableau sol dont sol[0]=Xi1 ,
                 #print('sol de Y : ', Y)
               #on pourrait imprimer les valeurs, si on en obtient plusieurs -> on peut encore reduire l'erreur
     
-    return sol
+    return sol  #si il existe plusieurs valeurs, ici on ne return que les dernières valeurs 
+                #D'où l'interet de les imprimer avant pour verifier et de potentiellement reduire l'erreur
 
 #Débits finaux
 def Out_SMR(na,nb,deg):#'sol contient les débits de CH4...'
